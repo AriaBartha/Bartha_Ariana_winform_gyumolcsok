@@ -87,7 +87,7 @@ namespace winform_gyumolcsok
                     while (!sr.EndOfStream)
                     {
                         string[] line = sr.ReadLine().Split(';');
-                        Gyumolcs ujGyumolcs = new Gyumolcs(ulong.Parse(line[0]), line[1], int.Parse(line[2]));
+                        Gyumolcs ujGyumolcs = new Gyumolcs(line[0], line[1], int.Parse(line[2]));
                         listBoxFruitList.Items.Add(ujGyumolcs);
                     }
                 }

@@ -58,7 +58,13 @@ namespace winform_gyumolcsok
 
         private void updateFruit()
         {
-            ulong code = ulong.Parse(textBoxCode.Text);
+            if (String.IsNullOrEmpty(textBoxCode.Text))
+            {
+                MessageBox.Show("Nem adott meg kódot!");
+                textBoxCode.Focus();
+                return;
+            }
+            string code = textBoxCode.Text;
             if (String.IsNullOrEmpty(textBoxName.Text))
             {
                 MessageBox.Show("Nem adott meg nevet!");
@@ -74,7 +80,13 @@ namespace winform_gyumolcsok
 
         private void addFruit()
         {
-            ulong code = (ulong)(Program.nyitoForm.listBoxFruitList.Items.Count + 1);
+            if (String.IsNullOrEmpty(textBoxCode.Text))
+            {
+                MessageBox.Show("Nem adott meg kódot!");
+                textBoxCode.Focus();
+                return;
+            }
+            string code = textBoxCode.Text;
             if (String.IsNullOrEmpty(textBoxName.Text))
             {
                 MessageBox.Show("Nem adott meg nevet!");

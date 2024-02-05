@@ -8,15 +8,15 @@ namespace winform_gyumolcsok
 {
     internal class Gyumolcs
     {
-        ulong code;
+        string code;
         string name;
         int amount;
 
-        public ulong Code { get => code; set => code = value; }
+        public string Code { get => code; set => code = value; }
         public string Name { get => name; set => name = value; }
         public int Amount { get => amount; set => amount = value; }
 
-        public Gyumolcs(ulong code, string name, int amount)
+        public Gyumolcs(string code, string name, int amount)
         {
             Code = code;
             Name = name;
